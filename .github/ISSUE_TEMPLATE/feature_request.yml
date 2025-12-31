@@ -1,0 +1,88 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[FEATURE] "
+labels: ["feature"]
+
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: What area would this affect?
+      options:
+        - Home page
+        - Dashboard
+        - Progress Tracker
+        - Divisions (squads)
+        - Leaderboards (squad-progress)
+        - Events Calendar
+        - Bank
+        - Fleet
+        - Marketplace
+        - Account
+        - Mining
+        - Links
+        - System-wide / Multiple areas
+        - OTHER
+    validations:
+      required: true
+
+  - type: input
+    id: area_other
+    attributes:
+      label: If you selected OTHER, please specify
+      placeholder: e.g. new tool, new modal, background system
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the limitation, frustration, or missing capability.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe what you would like to see added or changed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches or workarounds you’ve thought about.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to you?
+      options:
+        - Nice to have
+        - Would significantly improve usability
+        - Blocking current workflow
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who would benefit from this?
+      options:
+        - Just me
+        - Power users
+        - Most users
+        - All users
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups / references
+      description: Drag and drop images, diagrams, or paste links if relevant.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that would help evaluate this request.
