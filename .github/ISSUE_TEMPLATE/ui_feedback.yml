@@ -1,0 +1,58 @@
+name: Visual / UX Feedback
+description: Submit feedback on UI design, layout, or user experience
+title: "[UX] "
+labels: ["ux", "visual"]
+
+body:
+  - type: dropdown
+    id: page
+    attributes:
+      label: What page or feature is affected?
+      options:
+        - Home page
+        - Dashboard
+        - Progress Tracker
+        - Divisions (squads)
+        - Leaderboards (squad-progress)
+        - Events Calendar
+        - Bank
+        - Fleet
+        - Marketplace
+        - Account
+        - Mining
+        - Links
+        - OTHER
+    validations:
+      required: true
+
+  - type: input
+    id: page_other
+    attributes:
+      label: If OTHER, please specify
+      placeholder: e.g. new modal, overlay, edge case screen
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue or feedback
+      description: What feels off, confusing, or could be improved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement (optional)
+      description: How would you make it better?
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots / screen recordings
+      description: Drag and drop files or paste links.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Browser, OS, resolution, etc.
