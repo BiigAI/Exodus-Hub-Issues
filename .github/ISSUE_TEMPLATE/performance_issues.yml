@@ -1,0 +1,69 @@
+name: Performance / Stability Issue
+description: Report slowdowns, freezes, crashes, or unstable behavior
+title: "[PERF] "
+labels: ["performance", "stability"]
+
+body:
+  - type: dropdown
+    id: page
+    attributes:
+      label: What page or feature is affected?
+      options:
+        - Home page
+        - Dashboard
+        - Progress Tracker
+        - Divisions (squads)
+        - Leaderboards (squad-progress)
+        - Events Calendar
+        - Bank
+        - Fleet
+        - Marketplace
+        - Account
+        - Mining
+        - Links
+        - OTHER
+    validations:
+      required: true
+
+  - type: input
+    id: page_other
+    attributes:
+      label: If OTHER, please specify
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Describe the problem
+      description: Include slowdowns, freezes, crashes, or errors.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Always
+        - Often
+        - Sometimes
+        - Once
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce (if known)
+      description: What actions lead to this issue?
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots / screen recordings
+      description: Drag and drop files or paste links.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Browser, OS, hardware, network conditions, etc.
