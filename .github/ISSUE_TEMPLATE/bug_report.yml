@@ -1,0 +1,93 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[BUG] "
+labels: ["bug"]
+
+body:
+  - type: dropdown
+    id: page
+    attributes:
+      label: What page did the bug happen on?
+      options:
+        - Home page
+        - Dashboard
+        - Progress Tracker
+        - Divisions (squads)
+        - Leaderboards (squad-progress)
+        - Events Calendar
+        - Bank
+        - Fleet
+        - Marketplace
+        - Account
+        - Mining
+        - Links
+        - OTHER
+    validations:
+      required: true
+
+  - type: input
+    id: page_other
+    attributes:
+      label: If you selected OTHER, please specify
+      placeholder: e.g. internal modal, overlay, edge case screen
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Polish (visual, copy, minor annoyance)
+        - Workaround needed
+        - Feature not functional
+        - Critical (crash, data loss, blocker)
+    validations:
+      required: true
+
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: Describe the bug as clearly as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Go to...
+        2. Click...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots / screen recordings
+      description: Drag and drop files here, or paste links.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Chrome 122 / Windows 11 / Logged in
+
+  - type: dropdown
+    id: repro_rate
+    attributes:
+      label: How often does this happen?
+      options:
+        - Always
+        - Often
+        - Sometimes
+        - Once
